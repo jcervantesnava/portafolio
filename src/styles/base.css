@@ -279,7 +279,7 @@ kbd {
 /* ---------- Encabezado ---------- */
 .site-header {
   position: sticky;
-  top: 0;
+  top: env(safe-area-inset-top, 0px);
   z-index: 40;
   height: var(--header-h);
   background: rgba(6, 10, 19, 0.72);
