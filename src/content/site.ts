@@ -12,13 +12,13 @@ export const site = {
   focus: ["Automatización", "Python", "SQL", "Análisis de Datos"],
   headline: "Transformo procesos complejos en soluciones inteligentes",
   intro:
-    "Trabajo entre la contabilidad y el código. Consulto y concilio información en MySQL, automatizo reportes con Python y construyo herramientas internas para que las áreas de negocio dejen de hacer a mano lo que una aplicación puede hacer mejor.",
+    "Más de 3 años entre la contabilidad y el código. Automatizo el cuadre de CFDI y los reportes de cierre con MySQL y Python, audito datos entre sistemas en varios países de LATAM y construyo aplicaciones internas para que las áreas de negocio dejen de hacer a mano lo que una herramienta puede hacer mejor.",
 
   /** URL pública donde se publicará el sitio (para SEO y vista previa en LinkedIn). */
   siteUrl: "https://johan-cervantes.vercel.app" as string,
 
   /** Correo profesional. Ejemplo: "nombre@dominio.com" */
-  email: null as string | null,
+  email: "j.tadeo.cervantes@gmail.com" as string | null,
   /** Perfil de LinkedIn. Ejemplo: "https://www.linkedin.com/in/tu-usuario" */
   linkedin: null as string | null,
   /** Perfil de GitHub. Ejemplo: "https://github.com/tu-usuario" */
@@ -28,7 +28,7 @@ export const site = {
    * public/cv/Johan-Cervantes-CV.pdf y cambia este valor a
    * "/cv/Johan-Cervantes-CV.pdf".
    */
-  cvPath: null as string | null,
+  cvPath: "/cv/Johan-Cervantes-CV.pdf" as string | null,
   /**
    * Endpoint opcional para el formulario de contacto (Formspree, Getform,
    * una función serverless propia…). Si está vacío y hay correo, el

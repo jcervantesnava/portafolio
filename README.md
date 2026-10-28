@@ -2,6 +2,14 @@
 
 CV digital y portafolio con demostraciones interactivas. Hecho con Next.js 15, React 19 y TypeScript. Se exporta como sitio estático: no necesita servidor ni base de datos.
 
+## Abrirlo en Cursor
+
+1. Descomprime el zip y en Cursor usa File > Open Folder sobre la carpeta `portafolio`.
+2. Abre la terminal de Cursor y ejecuta `npm install` y luego `npm run dev`.
+3. Abre http://localhost:3000. Cada cambio que guardes se ve al momento.
+
+El archivo `AGENTS.md` explica al asistente de Cursor cómo está organizado el proyecto y qué reglas seguir.
+
 ## Ejecutar en tu computadora
 
 Requisitos: Node.js 20 o superior.
@@ -38,14 +46,18 @@ Todo el contenido vive en `src/content/`. Los componentes solo leen esos archivo
 
 Todo lo que esté en `null` se muestra en la web como **Pendiente** y sus botones quedan deshabilitados.
 
-### Subir tu CV
+### Tu CV
 
-1. Copia el PDF a `public/cv/Johan-Cervantes-CV.pdf`.
-2. En `src/content/site.ts` cambia `cvPath: null` por `cvPath: "/cv/Johan-Cervantes-CV.pdf"`.
+El PDF está en `public/cv/Johan-Cervantes-CV.pdf` y el botón de descarga ya apunta ahí. Para actualizarlo, reemplaza el archivo con el mismo nombre.
 
-### Llenar la trayectoria
+### Actualizar la trayectoria
 
-En `src/content/profile.ts`, arreglo `experience`: un objeto por puesto, del más reciente al más antiguo. Cambia cada `null` por el dato de tu CV. Haz lo mismo en `education` para formación y certificaciones. Puedes borrar los objetos de ejemplo que no uses.
+En `src/content/profile.ts`:
+- `experience`: un objeto por puesto, del más reciente al más antiguo. Cada puesto tiene `groups` de logros (con título opcional).
+- `education`: formación y certificaciones. Para una certificación nueva agrega un objeto con `kind: "certificacion"`.
+- `languages`: idiomas y nivel.
+
+Si cambias tu CV, reemplaza también `public/cv/Johan-Cervantes-CV.pdf` con el mismo nombre.
 
 ### Agregar un proyecto real
 

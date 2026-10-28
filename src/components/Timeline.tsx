@@ -1,10 +1,13 @@
-import { education, experience } from "@/content/profile";
+import { education, experience, languages } from "@/content/profile";
 
 const Pending = ({ children = "Pendiente" }: { children?: React.ReactNode }) => (
   <span className="status status-pending">{children}</span>
 );
 
 export default function Timeline() {
+  const formacion = education.filter((e) => e.kind === "formacion");
+  const certificaciones = education.filter((e) => e.kind === "certificacion");
+
   return (
     <section className="section" id="trayectoria" aria-labelledby="trayectoria-title">
       <div className="container trajectory">
@@ -20,15 +23,16 @@ export default function Timeline() {
                 <div className="timeline-body">
                   <h3>{e.role ?? <Pending>Puesto pendiente</Pending>}</h3>
                   <p className="timeline-company">{e.company ?? <Pending>Empresa pendiente</Pending>}</p>
-                  {e.highlights.length > 0 ? (
-                    <ul>
-                      {e.highlights.map((h) => (
-                        <li key={h}>{h}</li>
-                      ))}
-                    </ul>
-                  ) : (
-                    <p className="muted-small">Responsabilidades pendientes de capturar desde el CV.</p>
-                  )}
+                  {e.groups.map((g, gi) => (
+                    <div key={gi} className="timeline-group">
+                      {g.title && <h4>{g.title}</h4>}
+                      <ul>
+                        {g.items.map((h) => (
+                          <li key={h}>{h}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </li>
             ))}
@@ -38,16 +42,33 @@ export default function Timeline() {
         <aside className="education" aria-labelledby="formacion-title">
           <h3 id="formacion-title">Formación y certificaciones</h3>
           <ul>
-            {education.map((ed, i) => (
-              <li key={i}>
-                <span className="edu-kind">{ed.kind === "formacion" ? "Formación" : "Certificación"}</span>
-                <strong>{ed.title ?? <Pending />}</strong>
-                {(ed.institution || ed.period) && (
-                  <span className="muted-small">{[ed.institution, ed.period].filter(Boolean).join(", ")}</span>
-                )}
+            {formacion.map((ed) => (
+              <li key={ed.title}>
+                <span className="edu-kind">Formación</span>
+                <strong>{ed.title}</strong>
+                {ed.detail && <span>{ed.detail}</span>}
+                <span className="muted-small">{[ed.institution, ed.period].filter(Boolean).join(", ")}</span>
+              </li>
+            ))}
+            {certificaciones.map((ed) => (
+              <li key={ed.title}>
+                <span className="edu-kind">Certificación</span>
+                <strong>{ed.title}</strong>
+                <span className="muted-small">{[ed.institution, ed.period].filter(Boolean).join(", ")}</span>
               </li>
             ))}
           </ul>
+          <div className="languages">
+            <h4>Idiomas</h4>
+            <dl>
+              {languages.map((l) => (
+                <div key={l.name}>
+                  <dt>{l.name}</dt>
+                  <dd>{l.level}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
         </aside>
       </div>
     </section>

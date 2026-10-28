@@ -6,21 +6,21 @@
 export const profile = {
   title: "Entre los procesos de negocio y el código",
   paragraphs: [
-    "Mi trabajo empieza donde el proceso contable se vuelve repetitivo o propenso a errores. Conozco cómo fluye la información financiera y fiscal, y uso ese conocimiento para construir consultas, reportes y aplicaciones que la gente del área realmente utiliza.",
-    "Escribo SQL sobre bases MySQL, proceso datos con Python y pandas, genero archivos de Excel automáticamente y empaqueto herramientas de escritorio con PyInstaller, Tkinter o C++/Qt5, según lo que pida cada caso. Cuando hace falta, presento la información en Power BI.",
-    "Uso herramientas de inteligencia artificial como apoyo para desarrollar, analizar errores y documentar, con revisión y pruebas de mi parte antes de que algo llegue a producción.",
+    "Soy Analista de Sistemas Contables con más de 3 años automatizando procesos contables y fiscales. Mi especialidad es el cuadre de CFDI de ingresos, los reportes de cierre mensual (ingresos, notas de crédito, cuentas por cobrar e IVA) y la auditoría de datos entre sistemas en varios países de LATAM.",
+    "Escribo SQL en MySQL, proceso datos con Python (pandas, numpy, SQLAlchemy), construyo reportes en Excel con Power Query y desarrollo aplicaciones internas en Python y en C++ con Qt5, que distribuyo como ejecutables con PyInstaller.",
+    "Trabajo con herramientas de desarrollo asistido por IA, como Claude y Cursor, junto con Git y Linear, para entregar más rápido y con mejor documentación. Todo lo que genera la IA pasa por mi revisión y mis pruebas.",
   ],
   activities: [
-    "Soporte a procesos contables y financieros",
-    "Consultas SQL y manejo de bases de datos MySQL",
-    "Automatización de reportes",
-    "Desarrollo y mantenimiento de herramientas internas",
-    "Conciliación de información contable y fiscal",
-    "Procesamiento de datos",
-    "Generación de archivos Excel",
-    "Desarrollo de aplicaciones de escritorio",
-    "Optimización de tareas repetitivas",
-    "Apoyo a usuarios y áreas de negocio",
+    "Cuadre de CFDI de ingresos para dos empresas",
+    "Reportes de cierre mensual: ingresos, notas de crédito, CxC e IVA",
+    "Costo promedio mensual de cinco empresas",
+    "Consultas SQL para contabilidad, compras, nómina y auditoría",
+    "Auditoría SQL en El Salvador, Honduras y Belice",
+    "Reportes en Excel y Power Query conectados a MySQL",
+    "ERP interno en Python y Qt5",
+    "Aplicaciones internas en Qt5/C++",
+    "Flujos de aprobación con notificaciones por correo",
+    "Soporte y capacitación a usuarios de LATAM y CDMX",
   ],
 };
 
@@ -34,55 +34,59 @@ export interface SkillGroup {
 
 export const skillGroups: SkillGroup[] = [
   {
-    area: "Desarrollo",
-    items: ["Python", "C++", "JavaScript y TypeScript (este portafolio)"],
+    area: "Contabilidad y fiscal",
+    items: ["CFDI de ingresos y notas de crédito", "Cuadre de CFDI", "IVA", "Cuentas por cobrar", "Costo promedio", "Cierre mensual"],
     example:
-      "Scripts y aplicaciones en Python para procesos contables; C++ con Qt5 para herramientas de escritorio; TypeScript y React en este sitio.",
-    accent: "blue",
-  },
-  {
-    area: "Datos",
-    items: ["SQL", "MySQL", "pandas", "Excel"],
-    example:
-      "Consultas de conciliación por empresa y periodo en MySQL, procesadas con pandas y entregadas en Excel con totales de control.",
+      "Cuadre automático de CFDI de ingresos para dos empresas, con fecha de corte dinámica y ejecución semanal programada.",
     accent: "cyan",
   },
   {
-    area: "Interfaces",
-    items: ["Tkinter", "Qt5"],
+    area: "Bases de datos",
+    items: ["MySQL", "PostgreSQL", "Consultas complejas", "Scripts multisentencia", "Auditoría de datos"],
     example:
-      "Ventanas con selector de empresa, fechas y barra de progreso para que el usuario genere reportes sin tocar código.",
+      "Auditoría SQL de un sistema de requisiciones en tres países, comparando el sistema legado contra el nuevo.",
     accent: "blue",
   },
   {
-    area: "Inteligencia de negocio",
-    items: ["Power BI", "Reportes y visualización de datos"],
+    area: "Programación",
+    items: ["Python", "pandas", "numpy", "SQLAlchemy", "C++", "JavaScript y TypeScript (este portafolio)"],
     example:
-      "Indicadores con comparación contra el periodo anterior y detalle filtrable, como el dashboard de la demo E.",
+      "Scripts y tareas programadas en Python para procesos contables; TypeScript y React en este sitio.",
+    accent: "blue",
+  },
+  {
+    area: "Interfaces y aplicaciones",
+    items: ["Qt5", "Tkinter", "PyInstaller"],
+    example:
+      "ERP interno en Python y Qt5 con catálogos, pedidos y solicitudes de gasto, distribuido como ejecutable.",
+    accent: "blue",
+  },
+  {
+    area: "Reportes y BI",
+    items: ["Excel", "Power Query", "Tablas dinámicas", "ODBC", "Dashboards", "Power BI (básico)"],
+    example:
+      "Reportes semanales en Excel y Power Query conectados a MySQL que se distribuyen por correo a las áreas usuarias.",
     accent: "cyan",
   },
   {
     area: "Automatización",
-    items: [
-      "Procesamiento de información",
-      "Generación de archivos Excel",
-      "Ejecutables con PyInstaller",
-      "Automatización de tareas repetitivas",
-    ],
+    items: ["Tareas programadas", "Generación de archivos Excel", "Flujos de aprobación", "Notificaciones por correo"],
     example:
-      "Convertir un procedimiento manual de varios pasos en un ejecutable que hace la consulta, valida y genera el archivo.",
-    accent: "blue",
+      "Convertir una corrida manual en una cadena de scripts que se ejecuta sola en el servidor cada semana.",
+    accent: "cyan",
   },
   {
-    area: "Inteligencia artificial",
-    items: [
-      "IA como apoyo al desarrollo",
-      "Prototipado asistido por IA",
-      "Integración futura de modelos vía API",
-    ],
+    area: "IA y desarrollo",
+    items: ["Claude", "Claude Design", "Cursor", "Prototipado asistido por IA"],
     example:
-      "Analizar errores, redactar borradores de SQL y documentación, siempre revisados y probados antes de usarse.",
+      "Acelerar desarrollo, prototipos de interfaces y documentación, con revisión y pruebas antes de usar el resultado.",
     accent: "violet",
+  },
+  {
+    area: "Herramientas de trabajo",
+    items: ["Git", "GitHub", "Linear", "Auth0 (básico)"],
+    example: "Control de versiones con Git y GitHub, y seguimiento de tareas en Linear.",
+    accent: "blue",
   },
 ];
 
@@ -90,46 +94,99 @@ export interface ExperienceItem {
   role: string | null;
   company: string | null;
   period: string | null;
-  highlights: string[];
+  /** Grupos de logros. Un grupo sin título se muestra como lista simple. */
+  groups: { title?: string; items: string[] }[];
 }
 
-/**
- * Trayectoria. Llena estos datos con la información de tu CV definitivo.
- * Los campos en `null` aparecen en la web como "Pendiente".
- * Ordena del más reciente al más antiguo.
- */
+/** Trayectoria, del puesto más reciente al más antiguo. */
 export const experience: ExperienceItem[] = [
   {
-    role: "Analista de Programación Contable",
-    company: null,
-    period: null,
-    highlights: [
-      "Consultas SQL y manejo de bases de datos MySQL para procesos contables y financieros.",
-      "Automatización de reportes y generación de archivos Excel.",
-      "Conciliación de información contable y fiscal.",
-      "Desarrollo y mantenimiento de herramientas internas y aplicaciones de escritorio.",
-      "Apoyo a usuarios y áreas de negocio.",
+    role: "Analista de Sistemas Contables",
+    company: "Soluciones Profesionales Informática",
+    period: "May 2023 a la fecha",
+    groups: [
+      {
+        title: "Contabilidad, CFDI y cierre",
+        items: [
+          "Automaticé el cuadre de CFDI de ingresos para dos empresas: cadena de scripts MySQL ejecutados en servidor, con fecha de corte dinámica y ejecución programada semanal, eliminando la corrida manual.",
+          "Genero los reportes de cierre mensual de dos empresas (ingresos, notas de crédito, cuentas por cobrar e IVA) y mantengo actualizada la información de CFDI.",
+          "Construí reportes semanales en Excel y Power Query conectados a MySQL (calificaciones a corregir, histórico semanal y dashboard) que se distribuyen por correo a las áreas usuarias.",
+          "Calculo y analizo mensualmente el costo promedio de cinco empresas, apoyando decisiones basadas en datos.",
+        ],
+      },
+      {
+        title: "Datos y auditoría",
+        items: [
+          "Realicé una auditoría SQL multipaís (El Salvador, Honduras y Belice) del Sistema de Requisiciones, comparando el sistema legado contra el nuevo y validando la lógica de separación servidor/réplica en producción.",
+          "Desarrollo consultas SQL en MySQL para contabilidad, compras, nómina y auditoría.",
+        ],
+      },
+      {
+        title: "Desarrollo de software",
+        items: [
+          "Implementé un ERP interno en Python y Qt5 (catálogos, pedidos y solicitudes de gasto) que automatizó 35\u00a0% de retrabajos y redujo hasta 30\u00a0% los tiempos de aprobación y cierre.",
+          "Actualicé y mejoré aplicaciones internas en Qt5/C++ según requerimientos del negocio, con mejoras de hasta 40\u00a0%.",
+          "Automaticé flujos de aprobación con notificaciones por correo a los responsables; distribuyo herramientas internas como ejecutables con PyInstaller.",
+          "Uso Claude, Claude Design y Cursor para acelerar desarrollo, prototipos y documentación; control de versiones con Git/GitHub y seguimiento en Linear.",
+        ],
+      },
+      {
+        title: "Soporte y capacitación",
+        items: [
+          "Administré la intranet de LATAM y CDMX, capacité a personal de tiendas y oficinas, y doy soporte técnico y funcional a usuarios de contabilidad, fiscal, compras, nómina y auditoría.",
+        ],
+      },
     ],
   },
   {
-    role: null,
-    company: null,
-    period: null,
-    highlights: [],
+    role: "Analista de Monitoreo",
+    company: "INPRO TELECOM S.A. de C.V.",
+    period: "Nov 2022 a feb 2023",
+    groups: [
+      {
+        items: [
+          "Gestioné incidencias técnicas mediante TT y CCM, asegurando respuesta oportuna y resolución efectiva.",
+          "Monitoreé infraestructura de red y energía (DAS, Meraki, UPS y transmisión por fibra óptica) y di soporte a clientes por teléfono y correo.",
+        ],
+      },
+    ],
+  },
+  {
+    role: "Asistente de Soporte Técnico / Asistente General de Corte",
+    company: "PLASTINAL S.A. de C.V.",
+    period: "Jun 2021 a nov 2022",
+    groups: [
+      {
+        items: [
+          "Operé y di mantenimiento preventivo a maquinaria de corte y embolsado, capacité al personal de producción y administré datos de producción y nómina.",
+        ],
+      },
+    ],
   },
 ];
 
 export interface EducationItem {
-  title: string | null;
-  institution: string | null;
-  period: string | null;
+  title: string;
+  detail?: string;
+  institution: string;
+  period?: string;
   kind: "formacion" | "certificacion";
 }
 
-/** Formación y certificaciones. Agrega elementos cuando los tengas. */
+/** Formación y certificaciones. Agrega certificaciones con kind: "certificacion". */
 export const education: EducationItem[] = [
-  { title: null, institution: null, period: null, kind: "formacion" },
-  { title: null, institution: null, period: null, kind: "certificacion" },
+  {
+    title: "Ingeniería en Sistemas Computacionales",
+    detail: "Especialidad en Auditoría y Seguridad Informática",
+    institution: "Tecnológico de Estudios Superiores de Coacalco, Estado de México",
+    period: "2017 a 2021",
+    kind: "formacion",
+  },
+];
+
+export const languages = [
+  { name: "Español", level: "Nativo" },
+  { name: "Inglés", level: "B1 (intermedio)" },
 ];
 
 export const processSteps = [
