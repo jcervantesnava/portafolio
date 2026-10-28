@@ -20,7 +20,7 @@ export const site = {
   /** Correo profesional. Ejemplo: "nombre@dominio.com" */
   email: "j.tadeo.cervantes@gmail.com" as string | null,
   /** Perfil de LinkedIn. Ejemplo: "https://www.linkedin.com/in/tu-usuario" */
-  linkedin: null as string | null,
+  linkedin: "https://www.linkedin.com/in/johan-cervantes-nava-2b8981183" as string | null,
   /** Perfil de GitHub. Ejemplo: "https://github.com/tu-usuario" */
   github: null as string | null,
   /**
