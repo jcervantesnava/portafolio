@@ -27,7 +27,10 @@ await esbuild.build({
 });
 
 let css = readFileSync(path.join(out, "main.css"), "utf8");
-const js = readFileSync(path.join(out, "main.js"), "utf8").replace(/<\/script/gi, "<\\/script");
+const photo = "data:image/webp;base64," + readFileSync(path.join(root, "public/img/johan-cervantes.webp")).toString("base64");
+const js = readFileSync(path.join(out, "main.js"), "utf8")
+  .replaceAll("/img/johan-cervantes.webp", photo)
+  .replace(/<\/script/gi, "<\\/script");
 const html = `<title>Portafolio Johan Cervantes</title>
 <meta name="description" content="Vista previa del portafolio de Johan Cervantes Nava">
 <style>${css}</style>

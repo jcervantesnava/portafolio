@@ -4,6 +4,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "@/styles/base.css";
 import "@/styles/sections.css";
 import "@/styles/demos.css";
+import CircuitBackground from "@/components/CircuitBackground";
 import { site } from "@/content/site";
 
 const description =
@@ -45,6 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           Saltar al contenido
         </a>
         <div className="page-bg" aria-hidden="true" />
+        <CircuitBackground />
         {children}
       </body>
     </html>

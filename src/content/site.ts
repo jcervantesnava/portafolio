@@ -14,6 +14,9 @@ export const site = {
   intro:
     "Más de 3 años entre la contabilidad y el código. Automatizo el cuadre de CFDI y los reportes de cierre con MySQL y Python, audito datos entre sistemas en varios países de LATAM y construyo aplicaciones internas para que las áreas de negocio dejen de hacer a mano lo que una herramienta puede hacer mejor.",
 
+  /** Foto de perfil (en /public). Usa null para ocultarla. */
+  photo: "/img/johan-cervantes.webp" as string | null,
+
   /** URL pública donde se publicará el sitio (para SEO y vista previa en LinkedIn). */
   siteUrl: "https://johan-cervantes.vercel.app" as string,
 

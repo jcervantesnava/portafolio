@@ -5,6 +5,7 @@ import "@fontsource-variable/jetbrains-mono";
 import "@/styles/base.css";
 import "@/styles/sections.css";
 import "@/styles/demos.css";
+import CircuitBackground from "@/components/CircuitBackground";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <>
+      <CircuitBackground />
       <Header home />
       {project ? (
         <main id="contenido" className="project-page" key={project.slug}>
