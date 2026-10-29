@@ -22,7 +22,7 @@ export const site = {
   /** Perfil de LinkedIn. Ejemplo: "https://www.linkedin.com/in/tu-usuario" */
   linkedin: "https://www.linkedin.com/in/johan-cervantes-nava-2b8981183" as string | null,
   /** Perfil de GitHub. Ejemplo: "https://github.com/tu-usuario" */
-  github: null as string | null,
+  github: "https://github.com/jcervantesnava" as string | null,
   /**
    * Ruta del CV en PDF dentro de /public. Copia tu archivo a
    * public/cv/Johan-Cervantes-CV.pdf y cambia este valor a
