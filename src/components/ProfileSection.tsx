@@ -11,7 +11,7 @@ export default function ProfileSection() {
             <img src={site.photo} alt={`Fotografía de ${site.name}`} width={560} height={700} loading="lazy" decoding="async" />
             <figcaption>
               <strong>{site.name}</strong>
-              <span>{site.role}</span>
+              <span>{site.photoCaption}</span>
             </figcaption>
           </figure>
         )}
